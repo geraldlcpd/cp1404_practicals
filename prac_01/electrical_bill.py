@@ -1,27 +1,13 @@
 """
-CP1404/CP5632 - Practical
-Pseudocode for temperature conversion
+Electricity Bill Estimator
 """
 
-MENU = """C - Convert Celsius to Fahrenheit
-F - Convert Fahrenheit to Celsius
-Q - Quit"""
-print(MENU)
-choice = input(">>> ").upper()
-while choice != "Q":
-    if choice == "C":
-        celsius = float(input("Celsius: "))
-        fahrenheit = celsius * 9.0 / 5 + 32
-        print("Result: {:.2f} F".format(fahrenheit))
-    elif choice == "F":
-        fahrenheit = float(input("Fahrenheit: "))
-        celsius = (fahrenheit-32) * (5/9)
-        print("Result: {:.2f} C".format(celsius))
-        # TODO: Write this section to convert F to C and display the result
-        # Hint: celsius = 5 / 9 * (fahrenheit - 32)
-        # Remove the "pass" statement when you are done. It's a placeholder.
-    else:
-        print("Invalid option")
-    print(MENU)
-    choice = input(">>> ").upper()
-print("Thank you.")
+print("ELECTRICITY BILL ESTIMATOR PROGRAM")
+
+kwh_price = float(input("Enter price per kWH in cents: "))
+daily_use = float(input("Enter daily use in kWH: "))
+bill_days = float(input("Enter number of billing days: "))
+
+total_bill = (daily_use * bill_days) * (kwh_price/100)
+print("Estimated bill : $ {:.2f}".format(total_bill))
+
