@@ -1,4 +1,4 @@
-'''
+
 print("---Program 1---")
 OUTPUT_FILE = "name.txt"
 
@@ -27,7 +27,7 @@ for line in numfile_in:
 
 
 print(total_nums)
-'''
+
 MIN_LENGTH = 5
 MAX_LENGTH = 15
 
