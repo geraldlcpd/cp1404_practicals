@@ -1,5 +1,2 @@
-
-def fn(x,y):
-    z = x + y
-
-print(fn(1,2))
+words = ["aye", "bee", "sea", "tea"]
+print(words.pop())
