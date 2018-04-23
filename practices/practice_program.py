@@ -9,3 +9,4 @@ num_keys = len(ages_dict)
 for key, value in ages_dict.items():
     print("{:8} - {:>6}".format(key, value))
 
+

@@ -21,7 +21,7 @@ for i in range (0, NUM_DAYS, 1):
         if random.randint(1, 2) == 1:
             price_change = random.uniform(0, MAX_INCREASE)
         else:
-            price_change = random.uniform(-MAX_DECREASE, 0)
+            price_change = random.uniform(-MAX_DECREASE, 0),
 
 
         count_days = count_days + 1
