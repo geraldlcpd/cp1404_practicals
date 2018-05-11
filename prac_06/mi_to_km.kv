@@ -2,6 +2,10 @@
 # a Widget with nothing added inside it
 BoxLayout:
     orientation: 'vertical'
+    Label:
+        text:'Convert mi to km'
+        font_size:48
+        color:(3,1,0,1)
     BoxLayout:
         orientation: 'horizontal'
         TextInput:
@@ -21,9 +25,11 @@ BoxLayout:
                 on_press:app.increment_down(float(input_mi.text))
     Button:
         id:convert_unit
-        text:'Convert Mi to Km'
+        text:'Convert'
         on_press:app.handle_calculate(float(input_mi.text))
     Label:
         id:output_label
         font_size:48
         color:(0,2,0,1)
+        font_name:'SourceCodePro'
+        bold:True

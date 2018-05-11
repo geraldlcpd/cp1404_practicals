@@ -1,6 +1,9 @@
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
+from kivy.core.text import LabelBase
+
+LabelBase.register(name='SourceCodePro', fn_regular='SourceCodePro-Regular.ttf', fn_bold='SourceCodePro-Semibold.ttf')
 
 class MiToKm(App):
     def build(self):
