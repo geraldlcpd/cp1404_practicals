@@ -2,4 +2,28 @@
 # a Widget with nothing added inside it
 BoxLayout:
     orientation: 'vertical'
-    TextInput:
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            id:input_mi
+            text: '8'
+            font_size:48
+            color:(0,0,0,0)
+        BoxLayout:
+            orientation: 'vertical'
+            Button:
+                id:increment_up
+                text:'Up'
+                on_press:app.increment_up(float(input_mi.text))
+            Button:
+                id:increment_down
+                text:'Down'
+                on_press:app.increment_down(float(input_mi.text))
+    Button:
+        id:convert_unit
+        text:'Convert Mi to Km'
+        on_press:app.handle_calculate(float(input_mi.text))
+    Label:
+        id:output_label
+        font_size:48
+        color:(0,2,0,1)
