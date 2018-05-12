@@ -13,20 +13,21 @@ BoxLayout:
             text: '8'
             font_size:48
             color:(0,0,0,0)
+            #on_text:app.handle_calculate(input_mi.text)
         BoxLayout:
             orientation: 'vertical'
             Button:
                 id:increment_up
                 text:'Up'
-                on_press:app.increment_up(float(input_mi.text))
+                on_press:app.increment_up(input_mi.text)
             Button:
                 id:increment_down
                 text:'Down'
-                on_press:app.increment_down(float(input_mi.text))
+                on_press:app.increment_down(input_mi.text)
     Button:
         id:convert_unit
         text:'Convert'
-        on_press:app.handle_calculate(float(input_mi.text))
+        on_press:app.handle_calculate(input_mi.text)
     Label:
         id:output_label
         font_size:48
