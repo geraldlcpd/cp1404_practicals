@@ -17,13 +17,14 @@ class SquareNumberApp(App):
     def build(self):
         """ build the Kivy app from the kv file """
 
-        Window.size = (300, 150)
+        Window.size = (300, 80)
         self.title = "Square Number"
         self.root = Builder.load_file('squaring.kv')
         return self.root
 
     def handle_calculate(self, value):
         """ handle calculation (could be button press or other call), output result to label widget """
+
         result = value ** 2
         result = ('{:.2f}'.format(result))
         self.root.ids.output_label.text = str(result)

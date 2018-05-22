@@ -7,7 +7,7 @@ LabelBase.register(name='SourceCodePro', fn_regular='SourceCodePro-Regular.ttf',
 
 class MiToKm(App):
     def build(self):
-        Window.size = (350,150)
+        Window.size = (350,200)
         self.title = 'Convert Mi to Km'
         self.root = Builder.load_file('mi_to_km.kv')
         return self.root
@@ -58,4 +58,6 @@ class MiToKm(App):
         else:
             result_display = '-.-- mi = -.-- km'
             self.root.ids.output_label.text = result_display
+
+
 MiToKm().run()

@@ -10,7 +10,7 @@ for key, value in ages_dict.items():
     print("{:8} - {:>6}".format(key, value))
 
 
-"""
+
 
 class Thing:
     def __init__(self, a, b):
@@ -23,3 +23,20 @@ class Thing:
 it = Thing(5, 6)
 it.change(2)
 print(it.a, it.b)
+
+"""
+
+def sumup(n, x=0, b=0):
+
+    if x < n:
+        x += 1
+        print(b)
+        b = b + x
+        sumup(n, x, b)
+
+
+    else:
+        print('Stop')
+
+def count_down(n, x)
+sumup(5)

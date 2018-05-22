@@ -1,0 +1,6 @@
+f = open('name.txt', 'w')
+f.writelines(["Hello World\n"])
+f.write('Hello World 2\n')
+#print('HW 3', file = 'name.txt')
+print('HW 4', file = f)
+f.close()
