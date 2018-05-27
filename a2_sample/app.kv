@@ -1,0 +1,68 @@
+#
+# File: app.py
+# Description:
+#       The Layout of the application using Kivy Toolkit
+#
+# Last Modified:
+#       May 17, 2018
+# Owner:
+#       Felix Widyanto Oetomo
+#
+#
+
+BoxLayout:
+    orientation: 'horizontal'
+    padding: 5
+    BoxLayout:
+        size_hint_x: 0.2
+        orientation: 'vertical'
+        padding: 5
+        Label:
+            text: "Sort By:"
+        Spinner:
+            id: sort_selection
+            text: app.current_sort
+            values: app.sorting_types
+            on_text: app.change_sort(self.text)
+        Button:
+            text: "Add New Song..."
+        Label:
+            text: "Title:"
+        TextInput:
+            id: title_input
+            write_tab: False
+        Label:
+            text: "Artist:"
+        TextInput:
+            id: artist_input
+            write_tab: False
+        Label:
+            text: "Year:"
+        TextInput:
+            id: year_input
+            write_tab: False
+        Button:
+            text: "Add Song"
+            on_release: app.add_song()
+        Button:
+            text: "Clear"
+            on_release: app.clear()
+
+    BoxLayout:
+        size_hint_x: 0.8
+        orientation: 'vertical'
+        Label:
+            size_hint_y: 0.1
+            id: title_win
+            text: "To learn: y, Learned: x"
+        ScrollView:
+            size_hint_y: 0.8
+            GridLayout:
+                id: song_containers
+                cols: 1
+                size_hint_x: 1
+        Label:
+            size_hint_y: 0.1
+            id: program_status
+            text: "SongToLearn App is starting"
+

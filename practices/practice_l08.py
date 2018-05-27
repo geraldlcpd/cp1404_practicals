@@ -1,5 +1,8 @@
-class Person:
-    def __init__(self, name='', age=0):
-        student_id = ''
+def rgba_convert(r, g, b):
+    r_new = r/255
+    g_new = g/255
+    b_new = b/255
 
-class Student(Person):
+    print('RGBA: ({:.2f}, {:.2f}, {:.2f}, 1)'.format(r_new, g_new, b_new))
+
+rgba_convert(255, 99, 71)
